@@ -6,20 +6,22 @@ int main()
 {
 	setlocale (LC_ALL, "Portuguese");
 	int opcao;
+	
 	do{
-		
-		printf ("\nMENU\n"
-				"Escolha uma Opção\n"
-				"Opção - 1. Para saber se o numero é PAR ou não. \n"
-				"Opção - 2. Para calcular uma potência. \n"
-				"Opção - 3. Para calcular uma raiz. \n"
-				"Opção - 4. Para saber se o ano é bissexto. \n"
-				"Opção - 5. Para calcular a média ponderada das 3 notas. \n"
-				"Opção - 6. Para calcular a médias das notas e saber se são válidas. \n"
-				"Opção - 7\n"
-				"Opção - 8\n"
-				"Opção - 9\n"
-				"Opção - 10\n");
+	
+		printf ("\n====================MENU======================\n\n"
+			"Escolha uma Opção\n"
+			"Opção - 1. Para saber se o numero é PAR ou não. \n"
+			"Opção - 2. Para calcular uma potência. \n"
+			"Opção - 3. Para calcular uma raiz. \n"
+			"Opção - 4. Para saber se o ano é bissexto. \n"
+			"Opção - 5. Para calcular a média ponderada das 3 notas. \n"
+			"Opção - 6. Para calcular a médias das notas e saber se são válidas. \n"
+			"Opção - 7. Para receber uma mensagem.\n"
+			"Opção - 8. Para receber uma mensagem.\n"
+			"Opção - 9. Para receber uma mensagem.\n"
+			"Opção - 10. Informe seu nome e sua matricula. \n\n"
+			"         DIGITE 0 PARA SAIR \n"                 );
 		
 		printf("\nOpção:");
 		scanf("%d",&opcao);
@@ -45,7 +47,6 @@ int main()
 			case 2:{
 				float A, resultado;
 				int B;
-				
 				printf ("Digite um numero Flutuante: ");
 				scanf ("%f", &A);
 				
@@ -128,9 +129,19 @@ int main()
 			case 9:
 				printf("Para com isso\n\n");
 				break;
-			case 10:
-				printf("Isso ai\n\n");
+			case 10:{
+				char nome[61];
+				int mtc;
+				
+				printf ("Digite seu nome: ");
+				scanf ("%s", &nome);
+				
+				printf ("Digite sua matricula: ");
+				scanf ("%d", &mtc);
+				
+				printf ("Oi %s sua matricula em Hexadecimal é: %2X\n", nome, mtc);
 				break;
+			}
 			default:
 				printf("Numero Invalido!\n\n");
 				break;	
