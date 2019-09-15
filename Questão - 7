@@ -20,7 +20,7 @@ int main()
 			"Opção - 7. Para receber uma mensagem.\n"
 			"Opção - 8. Para receber uma mensagem.\n"
 			"Opção - 9. Para receber uma mensagem.\n"
-			"Opção - 10. Informe seu nome e sua matricula. \n\n"
+			"Opção - 10.\n"
 			"         DIGITE 0 PARA SAIR \n"                 );
 		
 		printf("\nOpção:");
@@ -130,16 +130,7 @@ int main()
 				printf("Para com isso\n\n");
 				break;
 			case 10:{
-				char nome[61];
-				int mtc;
-				
-				printf ("Digite seu nome: ");
-				scanf ("%s", &nome);
-				
-				printf ("Digite sua matricula: ");
-				scanf ("%d", &mtc);
-				
-				printf ("Oi %s sua matricula em Hexadecimal é: %2X\n", nome, mtc);
+				printf("Isso ai\n\n");
 				break;
 			}
 			default:
