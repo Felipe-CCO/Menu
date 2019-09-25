@@ -130,24 +130,21 @@ int main()
 				break;
 			} 
 			case 7:{
-				int n, fat, atn;
+				int n;
+				int fat = 1;
+				int menos = 0;
+				int i = 0;
 				
-				printf ("Digite um numero:");
+				printf ("\n\nDigite um numero:");
 				scanf ("%d",&n);
 				
-				atn = n;
+				int limite = n;
 		
-				if(n > 0)
-				{
-					for (fat = 1; n > 1; n = n - 1){
-						fat = fat * n;	
-					}
-					printf ("\nO fatorial de %d é: %d\n", atn, fat);
-	
-					}else{
-					printf ("Número Invalido!\n");
-					}
-					
+				for(i = 1; i < limite; i++){
+					menos = i - 1;
+					fat *= (n- menos);
+				}
+					printf ("\nO fatorial do numero é: %d\n\n", fat);
 				break;
 			}
 			case 8:{
