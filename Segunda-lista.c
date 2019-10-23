@@ -18,7 +18,7 @@ int main()
 				"Opção - 6. Para calcular as médias das notas e saber se são válidas. \n"
 				"Opção - 7. Para saber o fatorial de um número.\n"
 				"Opção - 8. Para saber se um número é Primo ou Não .\n"
-				"Opção - 9. Para receber uma mensagem.\n"
+				"Opção - 9. Para imprimir a sequencia de fibo até um numero.\n"
 				"Opção - 10. Informe seu nome e sua matricula. \n\n"
 				"         DIGITE 0 PARA SAIR \n"                 );
 		
@@ -169,7 +169,27 @@ int main()
 				break;
 			}
 			case 9:
-				printf("Para com isso\n\n");
+				int numero;
+				int i;
+				int fi1=1;
+				int fi2=1;
+				int soma;
+				
+				printf("\n\nDigite um numero para imprimir a sequencia de fibo ate ele: ");
+				scanf("%d", &numero);
+				
+				for(i=1; i<=numero; i++){
+					if(i == 1|| i == 2){
+						printf("%d \n", fi1 );
+					}
+					else{
+						soma=fi1+fi2;
+						fi1=fi2;
+						fi2=soma;
+						printf("%d \n", soma);
+					}
+				}
+				printf("\n\n");
 				break;
 //Caso escolha a opção 10 esse programa executará
 			case 10:{
